@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Money Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="java.js"></script>
+    <!-- <script>
+        document.getElementById('transferForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent the form from being submitted normally
+
+    var account = document.getElementById('account').value;
+    var name = document.getElementById('name').value;
+    var amount = document.getElementById('amount').value;
+    var description = document.getElementById('description').value;
+
+    // code to save the form data to a text file would go here
+
+    alert('Amount successfully transferred'); // show a pop-up message
+});
+    </script> -->
+</head>
+
+<body>
+    <style>
+        body {
+           
+            background-image: url('1321778.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="news.html">News</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Language</a>
+            <div class="dropdown-content">
+                <a href="#">English</a>
+                <a href="#">Arabic</a>
+                <a href="#">French</a>
+            </div>
+        </li>
+    </ul>
+    <div class="container">
+
+        <div class="form-container">
+            <h2 class="form-title">Transfer Money</h2>
+            <form>
+
+                <div class="form-group">
+                    <label class="form-label" for="amount">Amount</label>
+                    <input class="form-input" type="number" id="amount" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="sender">Sender</label>
+                    <input class="form-input" type="text" id="Sender" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="recipent">recipent</label>
+                    <input class="form-input" id="recipent" required></input>
+                </div>
+                
+                <button class="form-submit"  type="submit">Submit </button>
+
+
+
+                
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="java.js"></script>
+</body>
+
+</html>
