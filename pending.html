@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pending Transactions</title>
+</head>
+<body>
+    <h1>Pending Transactions</h1>
+    <table border="1">
+        <tr>
+            <th>Sender</th>
+            <th>Recipient</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+        <!-- Assuming that pendingTransactions is an array of transaction objects -->
+        <c:forEach var="transaction" items="${pendingTransactions}">
+            <tr>
+                <td>${transaction.sender}</td>
+                <td>${transaction.recipient}</td>
+                <td>${transaction.amount}</td>
+                <td>
+                    <form action="/accept" method="post">
+                        <input type="hidden" name="transactionId" value="${transaction.id}">
+                        <input type="submit" value="Accept" style="background-color: green;">
+                    </form>
+                    <form action="/decline" method="post">
+                        <input type="hidden" name="transactionId" value="${transaction.id}">
+                        <input type="submit" value="Decline"  style="background-color:red;">
+                    </form>
+                </td>
+            </tr>
+        </c:forEach>
+    </table>
+</body>
+</html>
